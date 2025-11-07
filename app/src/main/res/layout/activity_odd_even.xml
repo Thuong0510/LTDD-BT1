@@ -7,23 +7,63 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tvEven"
+        android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Số chẵn:"
+        android:text="Nhập dãy số → tách chẵn / lẻ"
+        android:textStyle="bold"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Thanh nhập số: dùng text để cho phép cả dấu phẩy/khoảng trắng -->
+    <EditText
+        android:id="@+id/edtNumbers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ví dụ: 1, 2, 3  4  5,6,11 20"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnProcess"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Xử lý"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/edtNumbers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tvEven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Số chẵn:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btnProcess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/tvOdd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Số lẻ:"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/tvEven"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="8dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
