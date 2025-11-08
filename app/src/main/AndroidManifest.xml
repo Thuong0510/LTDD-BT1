@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".OddEvenActivity" />
+        <activity android:name=".StringActivity" />
     </application>
 
 </manifest>

@@ -10,8 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
+    private Button btnString;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnRight).setOnClickListener(v ->
                 startActivity(new android.content.Intent(MainActivity.this, OddEvenActivity.class))
         );
-
+        btnString = findViewById(R.id.btnString);
+        btnString.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, StringActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

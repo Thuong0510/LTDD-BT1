@@ -31,7 +31,6 @@ public class OddEvenActivity extends AppCompatActivity {
                 return;
             }
 
-            // Tách theo dấu phẩy hoặc khoảng trắng (1,2,3  4 5,6)
             String[] parts = raw.split("[,\\s]+");
 
             ArrayList<Integer> numbers = new ArrayList<>();
